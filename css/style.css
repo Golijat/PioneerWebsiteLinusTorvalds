@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    
+}
+/*header{
+    /* background-color: blue;
+    background-image: url('../img/Linus.png');
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    /* font-size: 1.2rem; */
+
+.HeaderImg{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-left: 10%;
+    border-radius: 30px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.HeaderText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-left: 15%;
+}
+.HeaderText p{
+    margin: 20px;
+    font-size: 1.6rem;
+}
+
+main{
+    background-color: bisque;
+}
+.Text{
+    display: flex;
+}
