@@ -1,34 +1,38 @@
+/* Sets margin and padding to 0 as the starting value.*/
 *{
     margin: 0;
     padding: 0;
 }
+
+/* Sets scroll behavior to smooth, making so that links directing to content on the same pages smoothly scrolls down to it instead of jumping to it. */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Sets variables for color. Is used to easily update and change color at many places without having to change every color manually. */
+:root {
+    --backgroundcolormain:grey;
+    --backgroundcolorsecondary:bisque;
+}
+
+body{
+    min-height: 100vh;
+}
+
 header{
-    background-color: grey;
+    background-color: var(--backgroundcolormain);
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: space-evenly; */
-    
+    justify-content: space-evenly;    
 }
-/*header{
-    /* background-color: blue;
-    background-image: url('../img/Linus.png');
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    /* font-size: 1.2rem; */
-
 .HeaderImg{
-    /* background-color: aqua; */
     display: flex;
     justify-content: center;
     margin: 20px;
-    margin-left: 10%;
     border-radius: 30px;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     overflow: hidden;
 }
 
@@ -37,16 +41,150 @@ header{
     justify-content: center;
     align-items: center;
     margin: 20px;
-    margin-left: 15%;
+    /* margin-left: 15%; */
 }
 .HeaderText p{
     margin: 20px;
     font-size: 1.6rem;
 }
 
-main{
-    background-color: bisque;
+nav{
+    background-color: grey;
 }
-.Text{
+nav ul{
+    height: 50px;
+    padding: 0;
+    margin: 0;
     display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+}
+
+main{
+    background-color: var(--backgroundcolorsecondary);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.About{
+    background-color: var(--backgroundcolormain);
+    border-radius: 20px;
+    height: 200px;
+    width: 290px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-items: center; */
+}
+.About p{
+    margin: 20px;
+}
+
+
+/* .TextBox{
+    width: 500px;
+    background-color: gray;
+    border-radius: 20px;
+    margin: 20px;
+    /* margin-inline: auto; */
+
+.TextBox{
+    display: flex;
+    justify-content: space-evenly;
+    /* justify-content: start; */
+}
+
+/* .EarlyLife{
+    width: 500px;
+    background-color: grey;
+    border-radius: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.EarlyLife p{
+    margin: 20px;
+}
+
+/*.Linux{
+    width: 500px;
+    background-color: grey;
+    border-radius: 20px;
+    margin: 20px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.Linux p{
+    margin: 20px;
+} */
+
+.InfoBox{
+    width: 35%;
+    width: 500px;
+    background-color: grey;
+    border-radius: 20px;
+    margin: 20px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.InfoBox p{
+    margin: 20px;
+}
+
+footer{
+    background-color: var(--backgroundcolormain);
+    height: 100%;
+}
+
+@media (max-width:600px) {
+
+    header{
+        flex-direction: column;
+    }
+    .HeaderImg{
+        width: 100%;
+    }
+    .HeaderText{
+        flex-direction: column;
+    }
+
+    #FillOut{
+        display: none;
+    }
+
+    .TextBox{
+        justify-content: initial;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .About{
+        width: 90%;
+    }
+    .About p{
+        font-size: 1.5rem;
+    }
+
+    .InfoBox{
+        width: 90%;
+    }
+    .InfoBox p{
+        font-size: 1.5rem;
+    }
 }
